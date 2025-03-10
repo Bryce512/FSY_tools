@@ -2,7 +2,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - prod
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,4 +25,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: prod
-          folder: docs  # Change to 'build' if using CRA
+          folder: dist  # Change to 'build' if using CRA
