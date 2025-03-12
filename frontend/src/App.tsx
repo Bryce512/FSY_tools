@@ -4,7 +4,6 @@ import './components/MaxLogin'
 import MaxLogin from './components/MaxLogin'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
