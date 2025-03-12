@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { song } from '../types/song';
@@ -13,6 +14,22 @@ function SongList() {
     };
     fetchSongs();
   }, []);
+=======
+import React from 'react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
+interface Song {
+  title: string;
+  artist: string;
+  spotifyUrl: string;
+}
+
+interface SongListProps {
+  songs: Song[];
+}
+
+const SongList: React.FC<SongListProps> = ({ songs }) => {
+>>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
   return (
     <div className="overflow-x-auto">
       <table className="w-full border border-gray-300 shadow-lg rounded-lg">
@@ -26,11 +43,19 @@ function SongList() {
         <tbody>
           {songs.map((song, index) => (
             <tr key={index} className="border-t hover:bg-gray-50">
+<<<<<<< HEAD
               <td className="px-4 py-2">{song.songTitle}</td>
               <td className="px-4 py-2">{song.artistName}</td>
               <td className="px-4 py-2 text-center">
                 <a
                   href={song.songUrl}
+=======
+              <td className="px-4 py-2">{song.title}</td>
+              <td className="px-4 py-2">{song.artist}</td>
+              <td className="px-4 py-2 text-center">
+                <a
+                  href={song.spotifyUrl}
+>>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-500 hover:text-green-700"
@@ -44,6 +69,10 @@ function SongList() {
       </table>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
 
 export default SongList;
