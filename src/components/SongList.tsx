@@ -29,7 +29,11 @@ interface SongListProps {
 }
 
 const SongList: React.FC<SongListProps> = ({ songs }) => {
+<<<<<<< HEAD
 >>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
+=======
+>>>>>>> d412aba (Renamed prettierrc, added SongList component)
+>>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
   return (
     <div className="overflow-x-auto">
       <table className="w-full border border-gray-300 shadow-lg rounded-lg">
@@ -55,7 +59,11 @@ const SongList: React.FC<SongListProps> = ({ songs }) => {
               <td className="px-4 py-2 text-center">
                 <a
                   href={song.spotifyUrl}
+<<<<<<< HEAD
 >>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
+=======
+>>>>>>> d412aba (Renamed prettierrc, added SongList component)
+>>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-500 hover:text-green-700"
@@ -73,6 +81,10 @@ const SongList: React.FC<SongListProps> = ({ songs }) => {
 }
 =======
 };
+<<<<<<< HEAD
 >>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
+=======
+>>>>>>> d412aba (Renamed prettierrc, added SongList component)
+>>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
 
 export default SongList;
