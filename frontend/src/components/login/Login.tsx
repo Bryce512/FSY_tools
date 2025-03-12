@@ -1,6 +1,6 @@
 "use client";
-import styles from "./MaxLogin.module.css";
-import StatusBar from "./StatusBar";
+import styles from "./Login.module.css";
+import StatusBar from "../StatusBar";
 import LoginForm from "./LoginForm";
 
 function MaxLogin() {

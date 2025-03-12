@@ -1,16 +1,15 @@
-import './App.css'
-import './components/MaxLogin'
-import MaxLogin from './components/MaxLogin'
+import "./App.css";
+import "./components/login/Login";
+import MaxLogin from "./components/login/Login";
 
 function App() {
-
   return (
     <>
       <div>
-        <MaxLogin/>
+        <MaxLogin />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
