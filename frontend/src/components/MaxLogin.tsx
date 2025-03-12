@@ -1,7 +1,14 @@
 "use client";
+<<<<<<< HEAD
 import styles from "./MaxLogin.module.css";
 import StatusBar from "./StatusBar";
 import LoginForm from "./login/LoginForm";
+=======
+import React from "react";
+import styles from "./MaxLogin.module.css";
+import StatusBar from "./StatusBar";
+import LoginForm from "./LoginForm";
+>>>>>>> 438e655 (create front/backend dir)
 
 function MaxLogin() {
   return (
