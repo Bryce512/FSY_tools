@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "cp dist/frontend/index.html dist/frontend/.html"
+    "postbuild": "cp dist/index.html dist/404.html"
   },
   "dependencies": {
     "react": "^19.0.0",
