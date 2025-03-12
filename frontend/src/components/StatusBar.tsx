@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "./MaxLogin.module.css";
+import styles from "./login/Login.module.css";
 
 const StatusBar: React.FC = () => {
   return (
