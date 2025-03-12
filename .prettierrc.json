@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "tabWidth": 2,
+    "endOfLine": "auto"
+}
+=======
+>>>>>>> 1ed3a83 (sync again)
   "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": false,
@@ -7,3 +20,7 @@
   "tabWidth": 2,
   "endOfLine": "auto"
 }
+<<<<<<< HEAD
+=======
+>>>>>>> e6e4cd8 (sync again)
+>>>>>>> 1ed3a83 (sync again)
