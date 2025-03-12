@@ -1,0 +1,154 @@
+.maxLogin {
+  background-color: #0aa7c6;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 305px;
+  display: flex;
+  overflow: hidden;
+}
+.statusBarIPhone {
+  background-color: #c3edf5;
+  width: 100%;
+  min-height: 50px;
+  padding-top: 21px;
+}
+.frame {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+.time {
+  color: #000;
+  white-space: nowrap;
+  text-align: center;
+  flex: 1;
+  align-self: stretch;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 16px;
+  padding-right: 6px;
+  font-family: SF Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 590;
+  line-height: 1;
+}
+.dynamicIslandspacer {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 124px;
+  height: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+}
+.levels {
+  flex: 1;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 6px;
+  padding-right: 16px;
+  display: flex;
+}
+.img {
+  aspect-ratio: 1.58;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 19px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.img2 {
+  aspect-ratio: 1.42;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 17px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.contentContainer {
+  color: #0e3f68;
+  white-space: nowrap;
+  align-self: center;
+  width: 260px;
+  max-width: 100%;
+  min-height: 548px;
+  margin-top: 29px;
+  font-weight: 400;
+}
+.title {
+  text-align: center;
+  font-family: Itim, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 80px;
+  line-height: 0;
+}
+.logoImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 30px;
+}
+.formContainer {
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 30px;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+.usernameField {
+  border-radius: 5px;
+  width: 100%;
+}
+.usernameInput {
+  background-color: #c3edf5;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 2px;
+}
+.passwordField {
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 12px;
+}
+.passwordInput {
+  background-color: #c3edf5;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 2px;
+}
+.loginButtonContainer {
+  color: #1e1e1e;
+  border-radius: 5px;
+  align-self: center;
+  width: 131px;
+  max-width: 100%;
+  margin-top: 12px;
+}
+.loginButton {
+  background-color: #fcd03b;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding-left: 13px;
+  padding-right: 13px;
+  box-shadow: 0 4px 4px #00000040;
+  cursor: pointer;
+  text-align: center;
+}

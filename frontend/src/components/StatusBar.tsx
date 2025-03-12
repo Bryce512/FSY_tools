@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from "react";
 import styles from "./login/Login.module.css";
+=======
+"use client";
+import React from "react";
+import styles from "./MaxLogin.module.css";
+>>>>>>> 438e655 (create front/backend dir)
 
 const StatusBar: React.FC = () => {
   return (
