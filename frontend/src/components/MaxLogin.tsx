@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./MaxLogin.module.css";
 import StatusBar from "./StatusBar";
 import LoginForm from "./LoginForm";
