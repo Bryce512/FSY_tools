@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": false,
@@ -8,13 +7,3 @@
   "tabWidth": 2,
   "endOfLine": "auto"
 }
-=======
-    "semi": true,
-    "singleQuote": true,
-    "jsxSingleQuote": false,
-    "trailingComma": "es5",
-    "printWidth": 80,
-    "tabWidth": 2,
-    "endOfLine": "auto"
-}
->>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
