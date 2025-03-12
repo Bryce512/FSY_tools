@@ -1,10 +1,13 @@
 "use client";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import styles from "./MaxLogin.module.css";
 import StatusBar from "./StatusBar";
 import LoginForm from "./login/LoginForm";
 =======
 import React from "react";
+=======
+>>>>>>> b25d955 (updates)
 import styles from "./MaxLogin.module.css";
 import StatusBar from "./StatusBar";
 import LoginForm from "./LoginForm";
