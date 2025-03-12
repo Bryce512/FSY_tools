@@ -1,14 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './App.css'
 import './components/MaxLogin'
 import MaxLogin from './components/MaxLogin'
 import AssignTestimonyRooms from './components/AssignTestimonyRooms'
 =======
 import "./App.css";
+=======
+>>>>>>> 3006d6c (add router)
 import { Routes, Route } from "react-router-dom";
-import "./components/login/Login";
 import MaxLogin from "./components/login/Login";
+<<<<<<< HEAD
 >>>>>>> f3981e1 (add router)
 
 function App() {
@@ -21,11 +24,22 @@ function App() {
         <MaxLogin/>
       </div>
 =======
+=======
+import InputDesign from "./components/AddTestimonyRoom/InputDesign";
+import "./App.css"; // Keep styles
+
+function App() {
+  return (
+>>>>>>> 3006d6c (add router)
     <Routes>
       <Route path="/" element={<MaxLogin />} />
+      <Route path="/TestimonyRooms" element={<InputDesign />} />
     </Routes>
+<<<<<<< HEAD
 >>>>>>> f3981e1 (add router)
     </>
+=======
+>>>>>>> 3006d6c (add router)
   );
 }
 
