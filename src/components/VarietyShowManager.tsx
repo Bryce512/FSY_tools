@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from './VarietyShowManager.module.css';
+import styles from './VarietyShow/VarietyShowManager.module.css';
 import { StatusBar } from './VarietyShow/StatusBar';
 import { NavigationHeader } from './VarietyShow/NavigationHeader';
 import VarietyShowBody from './VarietyShow/VarietyShowBody';
