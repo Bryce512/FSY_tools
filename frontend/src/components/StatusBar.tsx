@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import styles from "./login/Login.module.css";
-=======
 "use client";
-import React from "react";
-<<<<<<< HEAD
-import styles from "./MaxLogin.module.css";
->>>>>>> 438e655 (create front/backend dir)
-=======
-import React from "react";
-<<<<<<< HEAD
-import styles from "./AssignTestimonyRooms.module.css";
->>>>>>> 6c51bab (final for Jonas sprint 1)
-=======
-import styles from "./MaxLogin.module.css";
->>>>>>> 5fcf548 (create front/backend dir)
-=======
 import styles from "./login/Login.module.css";
->>>>>>> b271b52 (updates)
 
 const StatusBar: React.FC = () => {
   return (
