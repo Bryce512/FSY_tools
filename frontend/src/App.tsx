@@ -32,6 +32,7 @@ import SongRequestForm from "./components/RequestSong/SongRequestForm";
 import RoomForm from "./components/AddTestimonyRoom/RoomForm";
 import BryceAddCounselor from "./components/AddCounselor/AddCounselor";
 import LoginForm from "./components/login/LoginForm";
+import VarietyShowManager from "./components/VarietyShowManager";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
       <Route path="/RoomForm" element={<RoomForm />} />
       <Route path="/AddCounselor" element={<BryceAddCounselor />} />
       <Route path="/Login" element={<LoginForm />} />
+      <Route path="/VarietyShow" element={<VarietyShowManager />} />
+      <Route path="*" element={<h1>Not Found</h1>} />
     </Routes>
 <<<<<<< HEAD
 >>>>>>> f3981e1 (add router)
