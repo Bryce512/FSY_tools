@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fsyTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfb0ab6ad3ba35333c41277979e4929e5c8deae7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c70a6dca1166d895ba930588b3cf2afbba74ca6")]
 [assembly: System.Reflection.AssemblyProductAttribute("fsyTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fsyTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
