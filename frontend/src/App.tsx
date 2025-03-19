@@ -1,14 +1,11 @@
 import './App.css'
-import './components/MaxLogin'
-import MaxLogin from './components/MaxLogin'
+import SongRequestForm from './components/RequestSong/SongRequestForm'
 
 function App() {
 
   return (
     <>
-      <div>
-        <MaxLogin/>
-      </div>
+    <SongRequestForm />
     </>
   )
 }
