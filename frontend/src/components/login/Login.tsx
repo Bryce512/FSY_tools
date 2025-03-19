@@ -1,6 +1,7 @@
-import styles from "./login/Login.module.css";
-import StatusBar from "./StatusBar";
-import LoginForm from "./login/LoginForm";
+"use client";
+import styles from "./Login.module.css";
+import StatusBar from "../StatusBar";
+import LoginForm from "./LoginForm";
 
 function MaxLogin() {
   return (

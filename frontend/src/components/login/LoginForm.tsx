@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./MaxLogin.module.css";
+import styles from "./Login.module.css";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");

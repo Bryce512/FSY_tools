@@ -24,7 +24,7 @@ const SongRequestForm: React.FC = () => {
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label htmlFor="songTitle" className={styles.formLabel}>
-            Song Title
+            Song Title:
           </label>
           <input
             id="songTitle"
@@ -32,7 +32,7 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={songTitle}
             onChange={(e) => setSongTitle(e.target.value)}
-            placeholder="Title"
+            placeholder="Value"
           />
         </div>
         <div className={styles.formGroup}>
@@ -45,7 +45,7 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
-            placeholder="Artist"
+            placeholder="Value"
           />
         </div>
         <div className={styles.formGroup}>
@@ -58,7 +58,7 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={spotifyLink}
             onChange={(e) => setSpotifyLink(e.target.value)}
-            placeholder="Link"
+            placeholder="Value"
           />
         </div>
       </form>
