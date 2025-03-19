@@ -7,7 +7,15 @@ namespace fsyTools.Controllers
     [ApiController]
     public class VarietyShowController : ControllerBase
     {
+        private VarietyShowInterface _repo;
+
+        public VarietyShowController(VarietyShowInterface temp)
+        {
+            _repo = temp;
+        }
+
        
+
 
     }
 }
