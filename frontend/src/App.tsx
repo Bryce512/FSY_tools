@@ -8,6 +8,8 @@ import LoginForm from "./components/login/LoginForm";
 import VarietyShowManager from "./components/VarietyShowManager";
 import { Routes, Route } from "react-router-dom";
 import MaxLogin from "./components/MaxLogin";
+import { SongList } from "./components/ApprovedSongList/SongList";
+import ApprovedSongList from "./components/ApprovedSongList";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Route path="/" element={<MaxLogin />} />
       <Route path="/TestimonyRooms" element={<InputDesign />} />
       <Route path="/RoomTable" element={<RoomTable />} />
+      <Route path="/ApprovedSongList" element={<ApprovedSongList />} />
       <Route path="/SongRequestForm" element={<SongRequestForm />} />
       <Route path="/RoomForm" element={<RoomForm />} />
       <Route path="/AddCounselor" element={<BryceAddCounselor />} />
