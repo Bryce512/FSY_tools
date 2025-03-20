@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {}
+    "C:\\Users\\brojo\\OneDrive\\Desktop\\Winter 2025\\IS 401\\FSY Project\\backend\\fsyTools\\fsyTools\\fsyTools.csproj": {}
   },
   "projects": {
-    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {
+    "C:\\Users\\brojo\\OneDrive\\Desktop\\Winter 2025\\IS 401\\FSY Project\\backend\\fsyTools\\fsyTools\\fsyTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
+        "projectUniqueName": "C:\\Users\\brojo\\OneDrive\\Desktop\\Winter 2025\\IS 401\\FSY Project\\backend\\fsyTools\\fsyTools\\fsyTools.csproj",
         "projectName": "fsyTools",
-        "projectPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
-        "packagesPath": "/Users/Bryce/.nuget/packages/",
-        "outputPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/obj/",
+        "projectPath": "C:\\Users\\brojo\\OneDrive\\Desktop\\Winter 2025\\IS 401\\FSY Project\\backend\\fsyTools\\fsyTools\\fsyTools.csproj",
+        "packagesPath": "C:\\Users\\brojo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brojo\\OneDrive\\Desktop\\Winter 2025\\IS 401\\FSY Project\\backend\\fsyTools\\fsyTools\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/Bryce/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\brojo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,12 +43,23 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -67,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
