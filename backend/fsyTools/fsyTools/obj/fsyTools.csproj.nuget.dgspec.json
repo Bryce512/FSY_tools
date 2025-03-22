@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jburt\\OneDrive\\Documents\\Winter_2025_Classes\\IS 401\\401_project\\FSY_tools\\backend\\fsyTools\\fsyTools\\fsyTools.csproj": {}
+    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jburt\\OneDrive\\Documents\\Winter_2025_Classes\\IS 401\\401_project\\FSY_tools\\backend\\fsyTools\\fsyTools\\fsyTools.csproj": {
+    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jburt\\OneDrive\\Documents\\Winter_2025_Classes\\IS 401\\401_project\\FSY_tools\\backend\\fsyTools\\fsyTools\\fsyTools.csproj",
+        "projectUniqueName": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
         "projectName": "fsyTools",
-        "projectPath": "C:\\Users\\jburt\\OneDrive\\Documents\\Winter_2025_Classes\\IS 401\\401_project\\FSY_tools\\backend\\fsyTools\\fsyTools\\fsyTools.csproj",
-        "packagesPath": "C:\\Users\\jburt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jburt\\OneDrive\\Documents\\Winter_2025_Classes\\IS 401\\401_project\\FSY_tools\\backend\\fsyTools\\fsyTools\\obj\\",
+        "projectPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
+        "packagesPath": "/Users/Bryce/.nuget/packages/",
+        "outputPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jburt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/Bryce/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -74,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
