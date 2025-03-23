@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {}
+    "/Users/teagan/CodingProjects/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj": {}
   },
   "projects": {
-    "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj": {
+    "/Users/teagan/CodingProjects/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
+        "projectUniqueName": "/Users/teagan/CodingProjects/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
         "projectName": "fsyTools",
-        "projectPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
-        "packagesPath": "/Users/Bryce/.nuget/packages/",
-        "outputPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/obj/",
+        "projectPath": "/Users/teagan/CodingProjects/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
+        "packagesPath": "/Users/teagan/.nuget/packages/",
+        "outputPath": "/Users/teagan/CodingProjects/FSY_tools/backend/fsyTools/fsyTools/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/Bryce/.nuget/NuGet/NuGet.Config"
+          "/Users/teagan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,6 +43,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
