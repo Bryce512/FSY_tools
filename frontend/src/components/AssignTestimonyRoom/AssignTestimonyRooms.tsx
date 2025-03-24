@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
-import styles from "./AssignTestimonyRooms.module.css";
-import StatusBar from "./StatusBar";
+import styles from "../AssignTestimonyRoom/AssignTestimonyRooms.module.css";
+import StatusBar from "../StatusBar";
 import TopNavBar from "./TopNavBar";
 import ActionButtons from "./ActionButtons";
 import RoomTable from "./RoomTable";
