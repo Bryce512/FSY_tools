@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/FSY_tools/", // Change this to your repo name
   plugins: [react()],
+  server: {
+    port: 3000,
+  },
 });
