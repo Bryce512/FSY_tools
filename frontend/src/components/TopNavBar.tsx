@@ -1,7 +1,12 @@
 import React from "react";
-import styles from "./AssignTestimonyRooms.module.css";
+import styles from "../Global.module.css";
 
-const TopNavBar: React.FC = () => {
+interface TopNavBarProps {
+  title?: string; // Optional title parameter with default fallback
+}
+
+const TopNavBar: React.FC<TopNavBarProps> = ({title}:TopNavBarProps) => {
+
   return (
     <nav className={styles.topNavBar}>
 <button className={styles.iconButton} aria-label="Menu">
@@ -16,7 +21,7 @@ const TopNavBar: React.FC = () => {
   </svg>
 </button>
 
-      <h1 className={styles.pageTitle}>Assign Testimony Rooms</h1>
+      <h1 className={styles.pageTitle}>{title}</h1>
       <button className={styles.iconButton} aria-label="Profile">
         <svg
           width="24"
