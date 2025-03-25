@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { Song } from "../types/types";
+import { Song } from "../../types/types";
 
 
 const SongList: React.FC = () => {

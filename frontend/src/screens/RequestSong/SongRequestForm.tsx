@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './InputDesign.module.css';
+import styles from '../../Global.module.css';
 
 const SongRequestForm: React.FC = () => {
   const [songTitle, setSongTitle] = useState('');

@@ -24,7 +24,6 @@ const participants: Participant[] = [
 const VarietyShowBody: React.FC = () => {
   return (
     <div className={styles.container}>
-      {/* Action Buttons */}
       <div className={styles.actionButtons}>
         <button className={styles.addButton}>
           <FaPlus />

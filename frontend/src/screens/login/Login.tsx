@@ -1,11 +1,10 @@
-import styles from "./login/Login.module.css";
-import StatusBar from "./StatusBar";
-import LoginForm from "./login/LoginForm";
+"use client";
+import styles from "./Login.module.css";
+import LoginForm from "./LoginForm";
 
-function MaxLogin() {
+function Login() {
   return (
     <main className={styles.maxLogin}>
-      <StatusBar />
       <section className={styles.contentContainer}>
         <h1 className={styles.title}>FSY</h1>
         <img
@@ -19,4 +18,4 @@ function MaxLogin() {
   );
 }
 
-export default MaxLogin;
+export default Login;
