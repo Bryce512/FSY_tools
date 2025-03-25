@@ -26,3 +26,6 @@ dist-ssr
 bin
 obj
 packages
+
+backend/fsyTools/fsyTools/obj/Debug/net8.0/fsyTools.AssemblyInfo.cs
+backend/fsyTools/fsyTools/obj/Debug/net8.0/fsyTools.AssemblyInfoInputs.cache
