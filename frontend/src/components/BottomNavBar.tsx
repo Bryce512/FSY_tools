@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./AssignTestimonyRooms.module.css";
+import styles from "../Global.module.css";
 
 const BottomNavBar: React.FC = () => {
   return (
