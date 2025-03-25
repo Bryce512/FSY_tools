@@ -3634,19 +3634,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/Bryce/.nuget/packages/": {}
+    "/Users/maxrubert/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
+      "projectUniqueName": "/Users/maxrubert/Desktop/Information Systems/Winter 2025/IS 401/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
       "projectName": "fsyTools",
-      "projectPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
-      "packagesPath": "/Users/Bryce/.nuget/packages/",
-      "outputPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/obj/",
+      "projectPath": "/Users/maxrubert/Desktop/Information Systems/Winter 2025/IS 401/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
+      "packagesPath": "/Users/maxrubert/.nuget/packages/",
+      "outputPath": "/Users/maxrubert/Desktop/Information Systems/Winter 2025/IS 401/FSY_tools/backend/fsyTools/fsyTools/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/Bryce/.nuget/NuGet/NuGet.Config"
+        "/Users/maxrubert/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3709,7 +3709,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/maxrubert/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
