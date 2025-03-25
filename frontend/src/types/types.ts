@@ -22,3 +22,12 @@ export interface Room {
   conductingFemaleAC?: string;
   groups: Group[];
 }
+
+export interface VarietyShow {
+  show_id: number;
+  first_name: string;
+  last_name: string;
+  act_description: string;
+  order_or_preference: number;
+  is_performing: boolean;
+}
