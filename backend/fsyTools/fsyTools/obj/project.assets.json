@@ -3634,19 +3634,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/Bryce/.nuget/packages/": {}
+    "/Users/michaelbackman/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
+      "projectUniqueName": "/Users/michaelbackman/Desktop/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
       "projectName": "fsyTools",
-      "projectPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/fsyTools.csproj",
-      "packagesPath": "/Users/Bryce/.nuget/packages/",
-      "outputPath": "/Users/Bryce/Desktop/ISCore/IS401-PM/FSY_manager/backend/fsyTools/fsyTools/obj/",
+      "projectPath": "/Users/michaelbackman/Desktop/FSY_tools/backend/fsyTools/fsyTools/fsyTools.csproj",
+      "packagesPath": "/Users/michaelbackman/.nuget/packages/",
+      "outputPath": "/Users/michaelbackman/Desktop/FSY_tools/backend/fsyTools/fsyTools/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/Bryce/.nuget/NuGet/NuGet.Config"
+        "/Users/michaelbackman/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3664,11 +3664,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3709,7 +3704,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.13/libexec/sdk/8.0.113/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
