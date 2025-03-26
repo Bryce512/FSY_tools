@@ -1,6 +1,6 @@
 using fsyTools.Data;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using fsyTools.Models; // Replace 'fsyTools.Models' with the actual namespace containing fsyDbContext
 
 namespace fsyTools.Controllers
 {
@@ -8,9 +8,9 @@ namespace fsyTools.Controllers
     [ApiController]
     public class FSYController : ControllerBase
     {
-        private FsyDbContext _context;
+        private fsyDbContext _context;
 
-        public VarietyShowController(FsyDbContext temp)
+        public FSYController(fsyDbContext temp)
         {
             _context = temp;
         }
@@ -21,8 +21,6 @@ namespace fsyTools.Controllers
             var performers = _context.Performers.ToList(); // Materialize the query
             return Ok(new { performers }); // Wrap in an object to match frontend expectations
         }
-
-    }
 
     [HttpPost("assign")]
         public async Task<IActionResult> AssignRooms()
@@ -74,5 +72,6 @@ namespace fsyTools.Controllers
 
             return Ok(new { rooms, unassignedGroups });
         }
-}
+    }
+};
     
