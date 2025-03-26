@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './VarietyShowManager.module.css';
 import { FaEdit, FaPlus } from 'react-icons/fa';
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { Performer } from '../../types/performer';
 
 // interface Participant {
@@ -26,9 +26,11 @@ const [performers, setPerformers] = useState<Performer[]>([]);
 
 useEffect(() => {
   const fetchPerformers = async () => {
-    const response = await fetch('http://localhost:4000/VarietyShow/AllPerformers');
+    const response = await fetch(
+      'https://localhost:5000/VarietyShow/AllPerformers'
+    );
     const data = await response.json();
-    setPerformers(data.performers)
+    setPerformers(data.performers);
   };
   fetchPerformers();
 }, []);

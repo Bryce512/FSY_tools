@@ -14,17 +14,14 @@ namespace fsyTools.Controllers
         {
             _context = temp;
         }
-
+        
         [HttpGet("AllPerformers")]
-        public IEnumerable<Performer> GetPerformers()
+        public ActionResult<IEnumerable<Performer>> GetPerformers()
         {
-
-
-            var someItem = _context.Performers;
-
-
-            return someItem;
+            var performers = _context.Performers.ToList(); // Materialize the query
+            return Ok(new { performers }); // Wrap in an object to match frontend expectations
         }
+
     }
 }
     

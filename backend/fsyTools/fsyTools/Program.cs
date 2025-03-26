@@ -6,8 +6,8 @@ using fsyTools.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<fsyDbContext>(options =>
-    options.UseSqlite("Data Source=FSY_DB.db"));
+// builder.Services.AddDbContext<fsyDbContext>(options =>
+//     options.UseSqlite("Data Source=FSY_DB.db"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,7 +22,7 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<fsyDbContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<FsyDbContext>();
 
     try
     {
