@@ -59,17 +59,20 @@
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  padding: 0 30px;
   display: flex;
+}
+
+.bottomNavBar button {
+  background-color: transparent;
 }
 
 .navIcon {
   width: 64px; /* Slightly increased icon size */
   height: 64px;
-  box-shadow: 0 4px 4px #00000040;
   transition: transform 0.2s ease-in-out;
 }
 
 .navIcon:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
