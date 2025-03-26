@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using fsyTools.Data;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace fsyTools.Controllers
 {
@@ -6,7 +8,19 @@ namespace fsyTools.Controllers
     [ApiController]
     public class VarietyShowController : ControllerBase
     {
-       
+        private FsyDbContext _context;
+
+        public VarietyShowController(FsyDbContext temp)
+        {
+            _context = temp;
+        }
+        
+        [HttpGet("AllPerformers")]
+        public ActionResult<IEnumerable<Performer>> GetPerformers()
+        {
+            var performers = _context.Performers.ToList(); // Materialize the query
+            return Ok(new { performers }); // Wrap in an object to match frontend expectations
+        }
 
     }
 
@@ -61,3 +75,4 @@ namespace fsyTools.Controllers
             return Ok(new { rooms, unassignedGroups });
         }
 }
+    

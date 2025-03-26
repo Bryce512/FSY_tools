@@ -1,14 +1,20 @@
+using System.Net;
+using fsyTools.Data;
 using Microsoft.EntityFrameworkCore;
 using fsyTools.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<fsyDbContext>(options =>
-    options.UseSqlite("Data Source=FSY_DB.db"));
+// builder.Services.AddDbContext<fsyDbContext>(options =>
+//     options.UseSqlite("Data Source=FSY_DB.db"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<FsyDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("FSYConnection")));
+
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -16,7 +22,7 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<fsyDbContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<FsyDbContext>();
 
     try
     {
@@ -43,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x.WithOrigins("http://localhost:3000"));
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
