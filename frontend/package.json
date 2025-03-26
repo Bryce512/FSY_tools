@@ -11,10 +11,11 @@
     "postbuild": "cp dist/index.html dist/404.html"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0"
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -23,7 +24,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
