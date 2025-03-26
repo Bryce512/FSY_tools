@@ -6,7 +6,7 @@ namespace fsyTools.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class VarietyShowController : ControllerBase
+    public class FSYController : ControllerBase
     {
         private FsyDbContext _context;
 

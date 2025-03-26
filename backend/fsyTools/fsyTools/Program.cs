@@ -6,6 +6,8 @@ using fsyTools.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<fsyDbContext>(options =>
+    options.UseSqlite("Data Source=FSY.sqlite"));
 // builder.Services.AddDbContext<fsyDbContext>(options =>
 //     options.UseSqlite("Data Source=FSY_DB.db"));
 
@@ -37,10 +39,6 @@ using (var scope = app.Services.CreateScope())
 }
 
 // end of db test clause
-
-
-
-
 
 
 
