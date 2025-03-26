@@ -11,17 +11,17 @@ import RequestSong from './screens/RequestSong/RequestSong';
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/AssignRooms" element={<AssignTestimonyRooms />} />
-        <Route path="/TestimonyRooms" element={<TestimonyRooms />} />
-        <Route path="/RoomTable" element={<RoomTable />} />
-        <Route path="/RequestSong" element={<RequestSong />} />
-        <Route path="/RoomForm" element={<RoomForm />} />
-        <Route path="/AddCounselor" element={<BryceAddCounselor />} />
-        <Route path="/VarietyShow" element={<VarietyShowManager />} />
-        <Route path="*" element={<h1>Not Found</h1>} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/AssignRooms" element={<AssignTestimonyRooms />} />
+      <Route path="/TestimonyRooms" element={<TestimonyRooms />} />
+      <Route path="/RoomTable" element={<RoomTable />} />
+      <Route path="/RequestSong" element={<RequestSong />} />
+      <Route path="/RoomForm" element={<RoomForm />} />
+      <Route path="/AddCounselor" element={<BryceAddCounselor />} />
+      <Route path="/VarietyShow" element={<VarietyShowManager />} />
+      <Route path="*" element={<h1>Not Found</h1>} />
+    </Routes>
   );
 }
 
