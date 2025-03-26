@@ -28,6 +28,12 @@ export interface VarietyShow {
   first_name: string;
   last_name: string;
   act_description: string;
-  order_or_preference: number;
+  order_of_preference: number;
   is_performing: boolean;
+}
+
+export interface Users {
+  user_id: number;
+  username: string;
+  password: string;
 }
