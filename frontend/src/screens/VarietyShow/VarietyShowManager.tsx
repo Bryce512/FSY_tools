@@ -8,8 +8,9 @@ import TopNavBar from '../../components/TopNavBar';
 export const VarietyShowManager: React.FC = () => {
   return (
     <>
-      <div className="mainbody">
-        <TopNavBar title="Variety Show Manager" />
+    <TopNavBar title="Variety Show Manager" />
+
+      <div className="mainbody" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
         <main className={styles.container}>
           <section className={styles.content}>
             <div className={styles.actionButtons}>
@@ -19,8 +20,9 @@ export const VarietyShowManager: React.FC = () => {
             <VarietyShowBody />
           </section>
         </main>
-        <BottomNavBar />
+
       </div>
+      <BottomNavBar />
     </>
   );
 };
