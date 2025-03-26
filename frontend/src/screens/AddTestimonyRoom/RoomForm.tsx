@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import styles from "./TestimonyRooms.module.css";
-import FormInput from "./FormInput";
+'use client';
+import React from 'react';
+import styles from './TestimonyRooms.module.css';
+import FormInput from './FormInput';
 
 const RoomForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log("Form submitted");
+    console.log('Form submitted');
   };
 
   return (
@@ -29,7 +29,11 @@ const RoomForm = () => {
           placeholder="ex: 25"
           containerClassName={styles.div17}
         />
-        <button type="submit" className={styles.button}>
+        <button
+          type="submit"
+          className={styles.button}
+          onClick={() => window.location.reload()}
+        >
           Add Room
         </button>
       </form>

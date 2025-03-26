@@ -8,15 +8,10 @@ import TopNavBar from '../../components/TopNavBar';
 export const VarietyShowManager: React.FC = () => {
   return (
     <>
-    <TopNavBar title="Variety Show Manager" />
-
-      <div className="mainbody" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
-        <main className={styles.container}>
+      <div className="mainbody">
+        <TopNavBar title="Variety Show Manager" />
+        <main className={styles.container} style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
           <section className={styles.content}>
-            <div className={styles.actionButtons}>
-              <button className={styles.addButton}>+</button>
-              <button className={styles.publishButton}>Publish</button>
-            </div>
             <VarietyShowBody />
           </section>
         </main>
