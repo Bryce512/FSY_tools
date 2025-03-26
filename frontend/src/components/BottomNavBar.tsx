@@ -13,7 +13,7 @@ const BottomNavBar: React.FC = () => {
         alt="Door icon"
       />
       </button>
-      <button onClick={() => navigate("/TestimonyRooms")}>
+      <button onClick={() => navigate("/AddTestimonyRoom")}>
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ecaf7a016085e7163b83ef5b460151dd2c82e16"
           alt="Music icon"

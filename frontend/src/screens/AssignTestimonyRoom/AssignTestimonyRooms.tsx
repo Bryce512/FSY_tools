@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import styles from "../AssignTestimonyRoom/AssignTestimonyRooms.module.css";
-import StatusBar from '../../components/StatusBar';
 import TopNavBar from '../../components/TopNavBar';
-// import ActionButtons from "./ActionButtons";
+import ActionButtons from "./ActionButtons";
 // import RoomTable from "./RoomTable";
 import BottomNavBar from '../../components/BottomNavBar';
 import { Group, Room } from '../../types/types';
@@ -16,7 +15,6 @@ import { Group, Room } from '../../types/types';
 //       />
 
 //       <main className={styles.mainContent}>
-//         <ActionButtons />
 //         <RoomTable />
 //       </main>
 //     </div>
@@ -70,7 +68,6 @@ const RoomAssignment: React.FC = () => {
           </div>
         ))}
       </div>
-
       {unassignedGroups.length > 0 && (
         <div className="mt-6 p-4 bg-red-100 border border-red-400 rounded-lg">
           <h3 className="text-lg font-bold text-red-600">Unassigned Groups</h3>
@@ -83,6 +80,7 @@ const RoomAssignment: React.FC = () => {
           </ul>
         </div>
       )}
+      <ActionButtons />
       <BottomNavBar />
     </div>
   );
