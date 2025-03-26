@@ -1,46 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
-<<<<<<< HEAD
-=======
->>>>>>> bf7554cd2da309c1f234765e05a873f2282a6560
-    "semi": true,
-    "singleQuote": true,
-    "jsxSingleQuote": false,
-    "trailingComma": "es5",
-    "printWidth": 80,
-    "tabWidth": 2,
-    "endOfLine": "auto"
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 1ed3a83 (sync again)
-=======
-=======
->>>>>>> d412aba (Renamed prettierrc, added SongList component)
->>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
-  "semi": true,
-  "singleQuote": true,
-  "jsxSingleQuote": false,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "tabWidth": 2,
-  "endOfLine": "auto"
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e6e4cd8 (sync again)
->>>>>>> 1ed3a83 (sync again)
-=======
->>>>>>> e6e4cd8 (sync again)
-=======
-=======
     "semi": true,
     "singleQuote": true,
     "jsxSingleQuote": false,
@@ -49,9 +7,3 @@
     "tabWidth": 2,
     "endOfLine": "auto"
 }
->>>>>>> f9227f7 (Renamed prettierrc, added SongList component)
->>>>>>> d412aba (Renamed prettierrc, added SongList component)
->>>>>>> e40b6a4 (Renamed prettierrc, added SongList component)
-=======
-}
->>>>>>> bf7554cd2da309c1f234765e05a873f2282a6560
