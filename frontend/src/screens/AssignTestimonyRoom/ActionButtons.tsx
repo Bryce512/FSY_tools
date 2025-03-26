@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AssignTestimonyRooms.module.css';
-import { assignTestimonyRooms } from './AssignmentLogic';
+// import { assignTestimonyRooms } from './AssignmentLogic';
 import { useNavigate } from 'react-router-dom';
 
 const ActionButtons: React.FC = () => {
@@ -8,7 +8,7 @@ const ActionButtons: React.FC = () => {
 
   return (
     <div className={styles.actionButtonsContainer}>
-      <button className={styles.assignButton} onClick={assignTestimonyRooms}>
+      <button className={styles.assignButton} onClick={() => {}}>
         Assign
       </button>
       <button
