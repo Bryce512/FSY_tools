@@ -9,4 +9,5 @@ public class FsyDbContext : DbContext
         
     }
     public DbSet<Performer> Performers { get; set; }
+    public object Rooms { get; internal set; }
 }
