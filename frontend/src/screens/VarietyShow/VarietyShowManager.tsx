@@ -10,12 +10,8 @@ export const VarietyShowManager: React.FC = () => {
     <>
       <div className="mainbody">
         <TopNavBar title="Variety Show Manager" />
-        <main className={styles.container}>
+        <main className={styles.container} style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
           <section className={styles.content}>
-            <div className={styles.actionButtons}>
-              <button className={styles.addButton}>+</button>
-              <button className={styles.publishButton}>Publish</button>
-            </div>
             <VarietyShowBody />
           </section>
         </main>

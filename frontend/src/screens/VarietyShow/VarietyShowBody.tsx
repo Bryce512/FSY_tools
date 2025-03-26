@@ -43,16 +43,12 @@ const VarietyShowBody: React.FC = () => {
             <div key={participant.id} className={styles.participantItem}>
               <div className={styles.participantContent}>
                 <div className={styles.participantInfo}>
-                  <span className={styles.participantNumber}>
-                    {participant.id}
-                  </span>
-                  <span className={styles.participantName}>
-                    {participant.name}
-                  </span>
-                  <span className={styles.separator}>|</span>
-                  <span className={styles.participantTalent}>
-                    {participant.talent}
-                  </span>
+                  <span className={styles.participantNumber}>{participant.id}</span>
+                  <div className={styles.nameTalentRow}>
+                    <span className={styles.participantName}>{participant.name}</span>
+                    <span className={styles.separator}>|</span>
+                    <span className={styles.participantTalent}>{participant.talent}</span>
+                  </div>
                 </div>
                 <button className={styles.editButton}>
                   <FaEdit />
