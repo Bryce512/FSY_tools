@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<fsyDbContext>(options =>
-    options.UseSqlite("Data Source=FSY_DB.db"));
+    options.UseSqlite("Data Source=FSY.sqlite"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -34,15 +34,13 @@ using (var scope = app.Services.CreateScope())
 
 
 
-
-
-
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x.WithOrigins("http://localhost:3001"));
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
