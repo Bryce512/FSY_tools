@@ -1,25 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace fsyTools.Models
+namespace fsyTools.Models;
+
+public partial class User
 {
-    public class User
-    {
-        [Key]
-        public int UserId { get; set; }
+    public int UserId { get; set; }
 
-        [Required]
-        public string Username { get; set; } = null!;
+    public string Username { get; set; } = null!;
 
-        [Required]
-        public string Password { get; set; } = null!;
+    public string Password { get; set; } = null!;
 
-        [ForeignKey("PermissionGroupId")]
-        public int? PermissionGroupId { get; set; }
+    public string UserFullname { get; set; } = null!;
 
-        public virtual PermissionGroup? PermissionGroup { get; set; }
+    public string UserGender { get; set; } = null!;
 
-        public virtual ICollection<SongList> SongLists { get; set; } = new List<SongList>();
+    public int? PermissionGroupId { get; set; }
 
-    }
+    public virtual PermissionGroup? PermissionGroup { get; set; }
 }
