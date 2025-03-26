@@ -1,6 +1,7 @@
-using fsyTools.Data;
+using fsyTools.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace fsyTools.Controllers
 {
@@ -8,72 +9,107 @@ namespace fsyTools.Controllers
     [ApiController]
     public class FSYController : ControllerBase
     {
-        //    private FsyDbContext _context;
+        private FsyContext _context;
+        private Random _random = new Random();
 
-        //    public FSYController(FsyDbContext temp)
-        //    {
-        //        _context = temp;
-        //    }
+        public FSYController(FsyContext temp)
+           {
+               _context = temp;
+           }
 
-        //    [HttpGet("AllPerformers")]
-        //    public ActionResult<IEnumerable<Performer>> GetPerformers()
-        //    {
-        //        var performers = _context.Performers.ToList(); // Materialize the query
-        //        return Ok(new { performers }); // Wrap in an object to match frontend expectations
-        //    }
 
-        //}
+        [HttpGet("AllPerformers")]
+        public ActionResult<IEnumerable<VarietyShow>> GetPerformers()
+        {
+            var performers = _context.VarietyShows.ToList(); // Materialize the query
+            return Ok(new { performers }); // Wrap in an object to match frontend expectations
+        }
 
-        //[HttpPost("assign")]
-        //    public async Task<IActionResult> AssignRooms()
-        //    {
-        //        var rooms = await _context.Rooms.Include(r => r.Groups).ToListAsync();
-        //        var groups = await _context.Groups.Where(g => g.RoomId == null).ToListAsync();
-        //        var maleACs = await _context.Counselors.Where(c => c.IsAC && c.Gender == "M").Select(c => c.Name).ToListAsync();
-        //        var femaleACs = await _context.Counselors.Where(c => c.IsAC && c.Gender == "F").Select(c => c.Name).ToListAsync();
 
-        //        // Sort groups by size (descending) for best fit
-        //        groups = groups.OrderByDescending(g => g.Size).ToList();
+        [HttpPost("assign")]
+        public async Task<IActionResult> AssignRooms()
+            {
+                var rooms = await _context.Rooms.ToListAsync();
+                var companies = await _context.Companies.Where(g => g.RoomId == null).ToListAsync();
+                var maleACs = await _context.Users
+                    .Where(c => c.PermissionGroupId == 1 && c.UserGender == "M")
+                    .Select(c => c.UserFullname)
+                    .ToListAsync();
+                var femaleACs = await _context.Users
+                    .Where(c => c.PermissionGroupId == 1 && c.UserGender == "F")
+                    .Select(c => c.UserFullname)
+                    .ToListAsync();
 
-        //        foreach (var room in rooms)
-        //        {
-        //            var assignedGroups = new List<Group>();
-        //            double remainingCapacity = room.Capacity;
+                // Sort companies by size (descending) for best fit
+                companies = companies.OrderByDescending(g => g.Size).ToList();
 
-        //            foreach (var group in groups.ToList()) // Iterate over a copy to remove items
-        //            {
-        //                if (group.Size + 1.2 <= remainingCapacity)
-        //                {
-        //                    room.Groups.Add(group);
-        //                    group.RoomId = room.Id;
-        //                    remainingCapacity -= (group.Size + 1.2);
-        //                    assignedGroups.Add(group);
-        //                }
-        //            }
+                foreach (var room in rooms)
+                {
+                    var assignedCompanies = new List<Company>();
+                    int? remainingCapacity = room.Capacity;
 
-        //            // Remove assigned groups from list
-        //            foreach (var group in assignedGroups)
-        //            {
-        //                groups.Remove(group);
-        //            }
+                    foreach (var company in companies.ToList()) // Iterate over a copy to remove items
+                    {
+                        if (company.Size + 1.2 <= remainingCapacity)
+                        {
+                            company.RoomId = room.RoomId; // Assign the room ID to the company
+                            remainingCapacity -= (int?)(company.Size + 1.2);
+                            assignedCompanies.Add(company);
+                        }
+                    }
 
-        //            // Assign conducting counselors
-        //            room.ConductingMaleAC = maleACs.Any() ? maleACs[_random.Next(maleACs.Count)] : null;
-        //            room.ConductingFemaleAC = femaleACs.Any() ? femaleACs[_random.Next(femaleACs.Count)] : null;
-        //        }
+                    // Remove assigned companies from the list
+                    foreach (var company in assignedCompanies)
+                    {
+                        companies.Remove(company);
+                    }
 
-        //        await _context.SaveChangesAsync();
-        //        return Ok(new { message = "Room assignment completed." });
-        //    }
+                    // Assign conducting counselors randomly
+                    room.ConductingMale= maleACs.Any() ? maleACs[_random.Next(maleACs.Count)] : null;
+                    room.ConductingFemal = femaleACs.Any() ? femaleACs[_random.Next(femaleACs.Count)] : null;
+                }
 
-        //    [HttpGet]
-        //    public async Task<IActionResult> GetRoomAssignments()
-        //    {
-        //        var rooms = await _context.Rooms.Include(r => r.Groups).ToListAsync();
-        //        var unassignedGroups = await _context.Groups.Where(g => g.RoomId == null).ToListAsync();
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Room assignment completed." });
+            }
 
-        //        return Ok(new { rooms, unassignedGroups });
-        //    }
+
+        [HttpGet("assignments")]
+        public async Task<IActionResult> GetRoomAssignments()
+        {
+            // Retrieve all rooms
+            var rooms = await _context.Rooms.ToListAsync();
+
+            // Retrieve all companies
+            var companies = await _context.Companies.ToListAsync();
+
+            // Group companies by RoomId and map to room names
+            var roomAssignments = rooms.ToDictionary(
+                room => room.RoomName,  // Use Room Name as key
+                room => companies
+                    .Where(c => c.RoomId == room.RoomId) // Filter companies assigned to this room
+            .Select( c => new
+                {
+                    CompanyName = c.CompanyName,
+                    MaleCounselor = c.MaleCounselor,
+                    FemaleCounselor = c.FemaleCounselor
+                })
+            .ToList()
+            );
+
+            // Get unassigned groups (companies with no RoomId)
+            var unassignedGroups = companies
+                .Where(c => c.RoomId == null)
+            .Select( c => new
+                {
+                    CompanyName = c.CompanyName,
+                    MaleCounselor = c.MaleCounselor,
+                    FemaleCounselor = c.FemaleCounselor
+                })
+            .ToList();
+
+            return Ok(new { roomAssignments, unassignedGroups });
+        }
+
     }
 }
-    
