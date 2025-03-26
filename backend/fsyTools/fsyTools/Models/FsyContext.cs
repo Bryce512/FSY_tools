@@ -5,16 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace fsyTools.Models;
 
-public partial class fsyDbContext : DbContext
+public partial class FsyContext : DbContext
 {
-    public fsyDbContext()
+    public FsyContext()
     {
     }
 
-    public fsyDbContext(DbContextOptions<fsyDbContext> options)
+    public FsyContext(DbContextOptions<FsyContext> options)
         : base(options)
     {
     }
+
+    public virtual DbSet<Company> Companies { get; set; }
 
     public virtual DbSet<PermissionGroup> PermissionGroups { get; set; }
 
@@ -22,11 +24,14 @@ public partial class fsyDbContext : DbContext
 
     public virtual DbSet<SongList> SongLists { get; set; }
 
+    public virtual DbSet<TestimonyRoom> TestimonyRooms { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<Performer> VarietyShow { get; set; }
     public DbSet<Group> Groups { get; set; }
     public DbSet<Counselor> Counselors { get; set; }
+    public virtual DbSet<VarietyShow> VarietyShows { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 // #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -34,6 +39,18 @@ public partial class fsyDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Company>(entity =>
+        {
+            entity.ToTable("company");
+
+            entity.Property(e => e.CompanyId).HasColumnName("company_id");
+            entity.Property(e => e.CompanyName).HasColumnName("company_name");
+            entity.Property(e => e.FemaleCounselor).HasColumnName("female_counselor");
+            entity.Property(e => e.MaleCounselor).HasColumnName("male_counselor");
+            entity.Property(e => e.RoomId).HasColumnName("room_id");
+            entity.Property(e => e.Size).HasColumnName("size");
+        });
+
         modelBuilder.Entity<PermissionGroup>(entity =>
         {
             entity.ToTable("permission_groups");
@@ -51,10 +68,13 @@ public partial class fsyDbContext : DbContext
             entity.Property(e => e.RoomId).HasColumnName("room_id");
             entity.Property(e => e.Building).HasColumnName("building");
             entity.Property(e => e.Capacity).HasColumnName("capacity");
+            entity.Property(e => e.ConductingFemal).HasColumnName("conducting_femal");
+            entity.Property(e => e.ConductingMale).HasColumnName("conducting_male");
             entity.Property(e => e.CreationDate)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("TIMESTAMP")
                 .HasColumnName("creation_date");
+            entity.Property(e => e.RoomLoad).HasColumnName("room_load");
             entity.Property(e => e.RoomName).HasColumnName("room_name");
             entity.Property(e => e.RoomNumber).HasColumnName("room_number");
         });
@@ -72,9 +92,21 @@ public partial class fsyDbContext : DbContext
                 .HasColumnType("TIMESTAMP")
                 .HasColumnName("creation_date");
             entity.Property(e => e.Title).HasColumnName("title");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+        });
 
-            entity.HasOne(d => d.User).WithMany(p => p.SongLists).HasForeignKey(d => d.UserId);
+        modelBuilder.Entity<TestimonyRoom>(entity =>
+        {
+            entity.ToTable("testimony_rooms");
+
+            entity.Property(e => e.TestimonyRoomId).HasColumnName("testimony_room_id");
+            entity.Property(e => e.Building).HasColumnName("building");
+            entity.Property(e => e.Capacity).HasColumnName("capacity");
+            entity.Property(e => e.CreationDate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("TIMESTAMP")
+                .HasColumnName("creation_date");
+            entity.Property(e => e.RoomName).HasColumnName("room_name");
+            entity.Property(e => e.RoomNumber).HasColumnName("room_number");
         });
 
         modelBuilder.Entity<User>(entity =>
@@ -86,6 +118,10 @@ public partial class fsyDbContext : DbContext
             entity.Property(e => e.UserId).HasColumnName("user_id");
             entity.Property(e => e.Password).HasColumnName("password");
             entity.Property(e => e.PermissionGroupId).HasColumnName("permission_group_id");
+            entity.Property(e => e.UserFullname).HasColumnName("user_fullname");
+            entity.Property(e => e.UserGender)
+                .HasColumnType("char(1)")
+                .HasColumnName("user_gender");
             entity.Property(e => e.Username).HasColumnName("username");
 
             entity.HasOne(d => d.PermissionGroup).WithMany(p => p.Users).HasForeignKey(d => d.PermissionGroupId);

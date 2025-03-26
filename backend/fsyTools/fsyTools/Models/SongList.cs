@@ -11,9 +11,5 @@ public partial class SongList
 
     public string Artist { get; set; } = null!;
 
-    public int? UserId { get; set; }
-
     public DateTime? CreationDate { get; set; }
-
-    public virtual User? User { get; set; }
 }
