@@ -1,0 +1,78 @@
+
+
+/* Top Nav */
+
+.topNavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: #c3edf5;
+  justify-content: space-between;
+  align-items: end;
+  height: 10%; /* Increased for spacing */
+  padding: 14px 16px; /* More padding */
+  display: flex;
+  gap: 12px; /* Adds spacing between elements */
+}
+
+.iconButton {
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  padding: 10px; /* Adds internal padding */
+  margin-right:7%;
+}
+
+.pageTitle {
+  text-align: center;
+  color: #1e1e1e;
+  font-size: 22px;
+  font-weight: bold;
+  flex-grow: 1;
+  margin: 0 16px; /* Adds spacing between text and buttons */
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+  background-color: #d8f0f9;
+}
+
+@media (max-width: 640px) {
+  .pageTitle {
+    font-size: 18px;
+  }
+}
+
+/* Bottom Nav Bar */
+.bottomNavBar {
+  background-color: #c3edf5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  display: flex;
+}
+
+.bottomNavBar button {
+  background-color: transparent;
+}
+
+.navIcon {
+  width: 64px; /* Slightly increased icon size */
+  height: 64px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

@@ -1,0 +1,206 @@
+/* .mainBody{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* padding: 20px 38px;
+}  */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0aa7c6;
+}
+
+.content {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 38px;
+  display: flex;
+}
+
+.actionButtons {
+  justify-content: space-between;
+  align-items: center;
+  width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.addButton {
+  color: #000;
+  text-align: center;
+  font-family:
+    Font Awesome 5 Brands,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  background-color: #ebfafd;
+  border-radius: 20px;
+  height: 31px;
+  padding: 7px 17px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+.publishButton {
+  color: #000;
+  text-align: center;
+  font-family:
+    Font Awesome 5 Brands,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  background-color: #ebfafd;
+  border-radius: 20px;
+  height: 31px;
+  padding: 7px 17px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+.participantListContainer {
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 353px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columnLabels {
+  justify-content: space-between;
+  align-items: center;
+  width: 208px;
+  display: flex;
+}
+
+.nameLabel,
+.talentLabel {
+  color: #000;
+  text-align: center;
+  font-family:
+    Font Awesome 5 Free,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.participantList {
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.participantItem {
+  background-color: #c3edf5;
+  border-radius: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+.participantContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participantInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.participantNumber {
+  font-family:
+    Font Awesome 5 Brands,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.participantName,
+.participantTalent {
+  font-family:
+    Font Awesome 5 Free,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+.separator {
+  font-family:
+    Font Awesome 5 Brands,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+body {
+  background-color: #0aa7c6;
+}
+
+.bottomNav {
+  background-color: #c3edf5;
+  width: 100vw; /* Ensure it stretches across the full screen */
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Ensure it aligns to the left */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomNavContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* Make sure it spans the full width */
+  max-width: 500px; /* Adjust based on your design */
+  margin: 0 auto; /* Center it */
+  padding: 0 20px;
+}
+
+.navIcon {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.navIcon:last-child {
+  box-shadow: none;
+}

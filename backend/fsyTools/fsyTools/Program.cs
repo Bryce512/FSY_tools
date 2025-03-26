@@ -1,15 +1,43 @@
+using Microsoft.EntityFrameworkCore;
+using fsyTools.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<fsyDbContext>(options =>
+    options.UseSqlite("Data Source=FSY_DB.db"));
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Because we do not have data in the database yet, I have this to test if the connection is working
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<fsyDbContext>();
+
+    try
+    {
+        dbContext.Database.OpenConnection();
+        Console.WriteLine("Database connection successful!");
+        dbContext.Database.CloseConnection();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Database connection failed: {ex.Message}");
+    }
+}
+
+// end of db test clause
+
+
+
+
+
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -17,9 +45,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
