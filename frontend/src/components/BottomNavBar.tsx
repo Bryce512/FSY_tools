@@ -7,7 +7,7 @@ const BottomNavBar: React.FC = () => {
 
   return (
     <nav className={styles.bottomNavBar}>
-      <button onClick={() => navigate('/TestimonyRooms')}>
+      <button onClick={() => navigate('/AssignRooms')}>
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/44d8f017248453b38c51b54c97beea2dfb2e45ae"
           alt="Door icon"
@@ -27,15 +27,15 @@ const BottomNavBar: React.FC = () => {
           className={styles.navIcon}
         />
       </button>
-      <button onClick={() => navigate('/AssignRooms')}>
+      {/* <button onClick={() => navigate('/AssignRooms')}>
         {' '}
         /
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/5283107b33cb6263e01928fb34321192625179bd"
           alt="Group icon"
           className={styles.navIcon}
-        />
-      </button>
+        /> */}
+      {/* </button> */}
     </nav>
   );
 };
