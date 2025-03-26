@@ -1,6 +1,7 @@
 using fsyTools.Data;
 using Microsoft.AspNetCore.Mvc;
-using fsyTools.Models; // Replace 'fsyTools.Models' with the actual namespace containing fsyDbContext
+using fsyTools.Models;
+using Microsoft.EntityFrameworkCore; // Replace 'fsyTools.Models' with the actual namespace containing fsyDbContext
 
 namespace fsyTools.Controllers
 {
@@ -9,6 +10,8 @@ namespace fsyTools.Controllers
     public class FSYController : ControllerBase
     {
         private fsyDbContext _context;
+        private readonly Random _random = new Random();
+
 
         public FSYController(fsyDbContext temp)
         {
@@ -18,11 +21,11 @@ namespace fsyTools.Controllers
         [HttpGet("AllPerformers")]
         public ActionResult<IEnumerable<Performer>> GetPerformers()
         {
-            var performers = _context.Performers.ToList(); // Materialize the query
+            var performers = _context.VarietyShows.ToList(); // Materialize the query
             return Ok(new { performers }); // Wrap in an object to match frontend expectations
         }
 
-    [HttpPost("assign")]
+        [HttpPost("assign")]
         public async Task<IActionResult> AssignRooms()
         {
             var rooms = await _context.Rooms.Include(r => r.Groups).ToListAsync();
@@ -56,8 +59,8 @@ namespace fsyTools.Controllers
                 }
 
                 // Assign conducting counselors
-                room.ConductingMaleAC = maleACs.Any() ? maleACs[_random.Next(maleACs.Count)] : null;
-                room.ConductingFemaleAC = femaleACs.Any() ? femaleACs[_random.Next(femaleACs.Count)] : null;
+                room.ConductingMaleAC = maleACs.Any() ? maleACs[_random.Next(maleACs.Count())] : null;
+                room.ConductingFemaleAC = femaleACs.Any() ? femaleACs[_random.Next(femaleACs.Count())] : null;
             }
 
             await _context.SaveChangesAsync();

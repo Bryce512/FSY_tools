@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using fsyTools.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace fsyTools.Models;
@@ -23,7 +24,7 @@ public partial class fsyDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<VarietyShow> VarietyShows { get; set; }
+    public virtual DbSet<Performer> VarietyShow { get; set; }
     public DbSet<Group> Groups { get; set; }
     public DbSet<Counselor> Counselors { get; set; }
 
