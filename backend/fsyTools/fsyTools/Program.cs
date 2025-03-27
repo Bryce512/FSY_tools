@@ -15,7 +15,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<FsyContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("FSYConnection")));
 
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000", "https://bryce512.github.io")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+        });
+});
 
 var app = builder.Build();
 
@@ -47,8 +57,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000", "https://bryce512.github.io"));
-
+app.UseCors("AllowSpecificOrigins");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
