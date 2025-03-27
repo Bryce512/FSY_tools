@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace fsyTools.Models;
 
-public partial class VarietyShow
+public partial class Performer
 {
     public int ShowId { get; set; }
 

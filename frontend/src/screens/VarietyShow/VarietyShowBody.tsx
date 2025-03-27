@@ -22,20 +22,29 @@ import { Performer } from '../../types/performer';
 //   { id: 9, name: 'Neville Longbottom', talent: 'Singing' },
 //   { id: 10, name: 'Ginny Weasley', talent: 'Skit' },
 // ];
-const [performers, setPerformers] = useState<Performer[]>([]);
-
-useEffect(() => {
-  const fetchPerformers = async () => {
-    const response = await fetch(
-      'https://localhost:5000/VarietyShow/AllPerformers'
-    );
-    const data = await response.json();
-    setPerformers(data.performers);
-  };
-  fetchPerformers();
-}, []);
 
 const VarietyShowBody: React.FC = () => {
+  const [performers, setPerformers] = useState<Performer[]>([]);
+
+
+  useEffect(() => {
+    const fetchPerformers = async () => {
+      try {
+        const response = await fetch(
+          'https://localhost:5000/Fsy/AllPerformers'
+        );
+        const data = await response.json();
+        setPerformers(data.performers);
+      } catch (error) {
+        console.error('Error fetching performers:', error);
+      }
+    };   fetchPerformers();
+    }, []);
+
+    useEffect(() => {
+      console.log('Performers state updated:', performers);
+    }, [performers]);
+
   return (
     <div className={styles.container}>
       <div className={styles.actionButtons}>
@@ -53,15 +62,21 @@ const VarietyShowBody: React.FC = () => {
         </div>
 
         <div className={styles.participantList}>
-          {performers.map((participant) => (
-            <div key={participant.show_id} className={styles.participantItem}>
+          {performers.map((participant, index) => (
+            <div
+              key={participant.showId ? participant.showId : `performer-${index}`}
+              className={styles.participantItem}
+            >
               <div className={styles.participantContent}>
                 <div className={styles.participantInfo}>
-                  <span className={styles.participantNumber}>{participant.id}</span>
                   <div className={styles.nameTalentRow}>
-                    <span className={styles.participantName}>{participant.name}</span>
+                    <span className={styles.participantName}>
+                      {participant.firstName}
+                    </span>
                     <span className={styles.separator}>|</span>
-                    <span className={styles.participantTalent}>{participant.talent}</span>
+                    <span className={styles.participantTalent}>
+                      {participant.actDescription}
+                    </span>
                   </div>
                 </div>
                 <button className={styles.editButton}>
