@@ -7,19 +7,19 @@ namespace fsyTools.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class FSYController : ControllerBase
+    public class FsyController : ControllerBase
     {
         private FsyContext _context;
         private Random _random = new Random();
 
-        public FSYController(FsyContext temp)
+        public FsyController(FsyContext temp)
            {
                _context = temp;
            }
 
 
         [HttpGet("AllPerformers")]
-        public ActionResult<IEnumerable<VarietyShow>> GetPerformers()
+        public ActionResult<IEnumerable<Performer>> GetPerformers()
         {
             var performers = _context.VarietyShows.ToList(); // Materialize the query
             return Ok(new { performers }); // Wrap in an object to match frontend expectations

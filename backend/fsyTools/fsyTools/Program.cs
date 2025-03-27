@@ -1,5 +1,4 @@
-using System.Net;
-using fsyTools.Data;
+using fsyTools.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -14,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<FsyDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("FSYConnection")));
+builder.Services.AddDbContext<FsyContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("FSYConnection")));
 
 builder.Services.AddCors();
 
@@ -24,7 +23,7 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<FsyDbContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<FsyContext>();
 
     try
     {
