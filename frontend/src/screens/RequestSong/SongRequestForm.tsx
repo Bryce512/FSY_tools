@@ -15,7 +15,7 @@ const SongRequestForm: React.FC = () => {
   };
 
   return (
-    <section className={styles.mainContent}>
+    <section className={`container ${styles.mainContent} mt-5`}>
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffde9be94fcc429beff48c54f2c4743a2b70a263"
         alt="Music"
@@ -32,12 +32,13 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={songTitle}
             onChange={(e) => setSongTitle(e.target.value)}
-            placeholder="Value"
+            placeholder="Enter song title"
           />
         </div>
+
         <div className={styles.formGroup}>
           <label htmlFor="artist" className={styles.formLabel}>
-            Artist
+            Artist:
           </label>
           <input
             id="artist"
@@ -45,12 +46,13 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
-            placeholder="Value"
+            placeholder="Enter artist name"
           />
         </div>
+
         <div className={styles.formGroup}>
           <label htmlFor="spotifyLink" className={styles.formLabel}>
-            Spotify Link
+            Spotify Link:
           </label>
           <input
             id="spotifyLink"
@@ -58,17 +60,16 @@ const SongRequestForm: React.FC = () => {
             className={styles.formInput}
             value={spotifyLink}
             onChange={(e) => setSpotifyLink(e.target.value)}
-            placeholder="Value"
+            placeholder="Paste Spotify link"
           />
         </div>
+
+        <div className="text-center">
+          <button type="submit" className={styles.requestButton}>
+            Request Song
+          </button>
+        </div>
       </form>
-      <button
-        type="submit"
-        className={styles.requestButton}
-        onClick={handleSubmit}
-      >
-        Request Song
-      </button>
     </section>
   );
 };

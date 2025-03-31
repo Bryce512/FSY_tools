@@ -76,3 +76,24 @@
   transform: scale(1.1);
   cursor: pointer;
 }
+
+.formGroup {
+  display: flex;
+  align-items: center; /* Align labels and inputs */
+  gap: 10px; /* Space between label and input */
+  margin-bottom: 15px; /* Space between each input group */
+}
+
+.formLabel {
+  width: 120px; /* Ensures all labels have the same width */
+  text-align: right; /* Aligns text to the right */
+  font-weight: bold;
+}
+
+.formInput {
+  flex-grow: 1; /* Makes inputs take up remaining space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
